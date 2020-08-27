@@ -32,7 +32,7 @@ Inventory HUD for ESX. You can open and close inventory using F2. Part of code w
 ### Using Git
 ```
 cd resources
-git clone https://github.com/Trsak/esx_inventoryhud [esx]/esx_inventoryhud
+git clone https://github.com/canremzi80/Sunucu [esx]/esx_inventoryhud
 ```
 
 ### Manually
