@@ -1,0 +1,288 @@
+* {
+ padding: 0;
+    margin: 0;
+    font-family: 'Signika', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-shadow:
+        -0.5px -0.5px 0 #000,
+        0.5px -0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        0.5px 0.5px 0 #000;
+}
+
+.ui {
+position: relative;
+ left: 0;
+top: 0;
+ width: 100vw;
+height: 100vh;
+ background-color: rgba(0, 0, 0, 0.29);
+ z-index: 0;
+overflow: hidden;
+display: none;
+}
+
+.inventory {
+   height: 55%;
+  width: fit-content;
+min-width: 75%;
+ max-width: 85%;
+ position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin: auto;
+
+}
+
+#playerInventory {
+    width: 600px;
+    height: 600px;
+    float: left;
+    overflow-y: scroll;
+}
+
+#controls {
+   display: inline-block;
+   width: 20%;
+ height: 100%;
+ position: absolute;
+   left: 0;
+ right: 0;
+margin-left: auto;
+margin-right: auto;
+}
+
+#otherInventory {
+   width: 500px;
+    height: 600px;
+    float: right;
+    overflow-y: scroll;
+	font-size: 12px;
+}
+
+#count {
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.slot {
+ float: left;
+background-color: rgba(50, 50, 50, 0.38);
+position: relative;
+ border: 1px solid #666666;
+overflow: hidden;
+
+}
+
+.slot:hover {
+   filter: brightness(0.75);
+}
+
+.item,
+.item-other {
+    width: 100px;
+	 min-width: 100px;
+	border-radius: 2px;
+    height: 115px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+	
+}
+
+.item-name {
+position: absolute;
+ bottom: 0;
+ text-align: center;
+ padding-top: 5px;
+  padding-bottom: 5px;
+ width: 100%;
+   min-height: 20px;
+  z-index: 500;
+   font-size: 10px;
+ background-color: rgba(41, 41, 41, 0.83);
+ border-top: 1px solid #666666;
+ color: #ffffff;
+   font-weight: 200;
+}
+
+.ui-draggable-dragging .item-name,
+.ui-draggable-dragging .item-count {
+    display: none;
+}
+
+.item-count {
+  position: absolute;
+  top: 0;
+  text-align: right;
+  right: 5px;
+  height:10px;
+  z-index: 500;
+  font-size: 12px;
+}
+}
+
+.ammoIcon {
+    width: 2px;
+    height: 2px;
+}
+
+.info-div {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(51, 51, 51, 0.5);
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.controls-div {
+   position: absolute;
+   top: 0;
+  bottom: 0;
+   left: 0;
+ right: 0;
+   margin: auto;
+ transform: none;
+ width: 65%;
+ height: fit-content;
+}
+
+.control {
+width: 100%;
+ height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+ text-align: center;
+ vertical-align: middle;
+  color: #ffffff;
+ border: none;
+   background-color: rgba(50, 50, 50, 0.38);
+ border: 1px solid #666666;
+  position: relative;
+}
+
+.control.disabled {
+  background-color: rgba(54, 54, 54, 0.81) !important;
+    transition: all ease-in 0.15s;
+}
+
+.hoverControl {
+    transition: all ease-in 0.15s;
+   filter: brightness(60%);
+}
+
+.item-name-bg {
+    width: 100%;
+    width: 117px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+#playerInventory::-webkit-scrollbar-track,
+#otherInventory::-webkit-scrollbar-track {
+    background-color: none;
+    border: none;
+}
+
+#playerInventory::-webkit-scrollbar,
+#otherInventory::-webkit-scrollbar {
+    width: 1px;
+    background-color: rgba(255, 255, 0, 0.0);
+}
+
+#playerInventory::-webkit-scrollbar-thumb,
+#otherInventory::-webkit-scrollbar-thumb {
+  
+}
+
+.nearbyPlayerButton {
+ width: 100%;
+ margin-top: 5px;
+  display: block;
+text-decoration: none;
+ padding: 2px;
+color: rgba(255, 255, 255, 0.85);
+background-color: rgba(83, 57, 57, 0.226);
+text-shadow: none;
+  font-size: 14px !important;
+outline: none;
+ text-transform: none;
+ text-align: center;
+line-height: 30px;
+border: none;
+}
+
+.nearbyPlayerButton:hover {
+    background-color: rgba(46, 29, 29, 0.8);
+}
+
+#noSecondInventoryMessage {
+    width: 615px;
+    height: 580px;
+    line-height: 580px;
+    text-align: center;
+	
+}
+
+@media (max-width: 1500px) {
+    .inventory {
+        width: 1300px;
+    }
+
+    #playerInventory {
+        width: 550px;
+    }
+
+    #controls {
+        width: 200px;
+    }
+
+    #otherInventory {
+        width: 400px;
+    }
+
+    #noSecondInventoryMessage {
+        width: 540px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .inventory {
+        width: 1000px;
+    }
+
+    #playerInventory {
+        width: 425px;
+    }
+
+    #controls {
+        width: 150px;
+    }
+
+    #otherInventory {
+        width: 425px;
+    }
+
+    #noSecondInventoryMessage {
+        width: 420px;
+    }
+}
